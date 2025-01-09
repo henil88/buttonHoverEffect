@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.btn{
+    margin: 20% 45%;
+}
+body{
+    background-color: black;
+}
+button{
+    padding: 20px 30px;
+    font-size: 20px;
+    border: 2px solid cyan;
+    color: cyan;
+    background-color: transparent;
+    font-weight: 600;
+    overflow: hidden;
+    position: relative;
+
+}
+button::after{
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: cyan;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    z-index: -1;
+    transition: all linear 0.5s;
+    border-radius: 50%;
+}
+button:hover::after{
+    transform: translate(-50%,-50%) scale(3);
+}
+button:hover{
+    color: black;
+}
